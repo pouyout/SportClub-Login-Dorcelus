@@ -1,129 +1,83 @@
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
-}
-
 body{
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
 
-font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 
-background-color:#f0f2f5;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
+    background: linear-gradient(135deg, #1b1f3b, #2d5baf);
 }
 
 .card{
+    background:white;
+    padding:35px;
+    width:320px;
 
-width:380px;
+    border-radius:20px;
 
-background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 
-padding:25px;
-
-border-radius:15px;
-
-border:1px solid #ccc;
-
-box-shadow:0px 4px 10px rgba(0,0,0,0.2);
-
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-.logo{
-
-width:200px;
-
-display:block;
-
-margin:auto;
-
-margin-bottom:20px;
-
+.card img{
+    width:180px;
+    margin:0 auto;
 }
 
-h2{
-
-text-align:center;
-
-margin-bottom:20px;
-
+.card h2{
+    text-align:center;
+    margin-bottom:10px;
 }
 
-form{
-
-display:flex;
-
-flex-direction:column;
-
+.card label{
+    font-weight:bold;
 }
 
-label{
+.card input{
+    width:100%;
+    padding:12px;
 
-margin-bottom:5px;
+    border-radius:10px;
+    border:1px solid #ccc;
 
-margin-top:10px;
+    font-size:14px;
+}
+.card input:focus{
+    outline:none;
+    border:1px solid #2d5baf;
 
+    box-shadow:0 0 5px rgba(45,91,175,0.5);
 }
 
-input{
+.card button{
+    width:100%;
+    padding:12px;
 
-padding:10px;
+    background:#2d5baf;
+    color:white;
 
-border:1px solid #ccc;
+    border:none;
+    border-radius:10px;
 
-border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
 
-margin-bottom:15px;
-
+    cursor:pointer;
 }
 
-button{
-
-padding:10px;
-
-background:#2563eb;
-
-color:white;
-
-border:none;
-
-border-radius:8px;
-
-cursor:pointer;
-
-}
-
-button:hover{
-
-background:#1d4ed8;
-
+.card button:hover{
+    background:#1b1f3b;
 }
 
 .links{
+    display:flex;
+    justify-content:space-between;
 
-margin-top:20px;
-
-display:flex;
-
-justify-content:space-between;
-
-}
-
-.links a{
-
-text-decoration:none;
-
-color:#2563eb;
-
-font-size:14px;
-
+    font-size:14px;
 }
