@@ -1,25 +1,172 @@
-body{
+*{
     margin:0;
     padding:0;
-    font-family:Arial,sans-serif;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#1b1f3b,#2d5baf);
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    padding:20px 60px;
+}
+
+header img{
+    width:220px;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#f8b400;
+}
+
+.hero{
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero a{
+    background:#f8b400;
+    color:#1b1f3b;
+    padding:15px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.hero a:hover{
+    opacity:0.9;
+}
+
+.beneficios{
+    background:white;
+    color:#1b1f3b;
+    padding:80px 40px;
+    text-align:center;
+}
+
+.beneficios h2{
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+.beneficios-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.beneficio{
+    background:#f5f5f5;
+    width:300px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.beneficio h3{
+    margin-bottom:15px;
+}
+
+.planes{
+    padding:80px 40px;
+    text-align:center;
+    color:white;
+}
+
+.planes h2{
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+.planes-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.plan{
+    width:250px;
+    padding:30px;
+    background:#f8b400;
+    color:#1b1f3b;
+    border-radius:15px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.plan h3{
+    margin-bottom:15px;
+}
+
+.nosotros{
+    background:white;
+    color:#1b1f3b;
+    padding:80px 40px;
+    text-align:center;
+}
+
+.nosotros p{
+    max-width:800px;
+    margin:20px auto;
+}
+
+footer{
+    background:#1b1f3b;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+.contenedor{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
-
-    background: linear-gradient(135deg, #1b1f3b, #2d5baf);
+    min-height:100vh;
+    width:100%;
 }
 
 .card{
     background:white;
+    width:380px;
     padding:35px;
-    width:320px;
-
     border-radius:20px;
-
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
-
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -33,43 +180,38 @@ body{
 .card h2{
     text-align:center;
     margin-bottom:10px;
+    color:#1b1f3b;
 }
 
 .card label{
     font-weight:bold;
+    color:#1b1f3b;
 }
 
 .card input{
     width:100%;
     padding:12px;
-
-    border-radius:10px;
     border:1px solid #ccc;
-
+    border-radius:10px;
     font-size:14px;
 }
+
 .card input:focus{
     outline:none;
     border:1px solid #2d5baf;
-
     box-shadow:0 0 5px rgba(45,91,175,0.5);
 }
 
 .card button{
     width:100%;
     padding:12px;
-
     background:#2d5baf;
     color:white;
-
     border:none;
     border-radius:10px;
-
     font-size:16px;
     font-weight:bold;
-
     cursor:pointer;
-    transition:0.3s;
 }
 
 .card button:hover{
@@ -79,19 +221,38 @@ body{
 .links{
     display:flex;
     justify-content:space-between;
-
-    font-size:14px;
 }
+
 .links a{
     text-decoration:none;
     color:#2d5baf;
-
-    transition:0.3s;
 }
 
 .links a:hover{
     color:#1b1f3b;
 }
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+}
+
 @media(max-width:480px){
 
     .card{
@@ -99,12 +260,7 @@ body{
         padding:25px;
     }
 
-    .card h2{
-        font-size:28px;
-    }
-
     .card img{
         width:150px;
     }
-
 }

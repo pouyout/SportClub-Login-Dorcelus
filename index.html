@@ -1,47 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportClub</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SportClub Login</title>
-
-<link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-<div class="contenedor">
+<header>
+    <img src="./img/logo.png" alt="SportClub">
 
-<div class="card">
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#planes">Planes</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="./pages/login.html">Login</a>
+    </nav>
+</header>
 
-<img src="./img/logo.png" class="logo">
+<section class="hero" id="inicio">
 
-<h2>Iniciar sesión</h2>
+    <h1>Transforma tu vida con SportClub</h1>
 
-<label>Correo electrónico:</label>
-<input type="email"
-placeholder="Ingresa tu correo electrónico"
-required>
+    <p>
+        Entrena con los mejores coaches y alcanza tus objetivos deportivos.
+    </p>
 
-<label>Contraseña:</label>
-<input type="password"
-placeholder="Ingresa tu contraseña"
-required
-minlength="6">
-<button>Ingresar</button>
+    <a href="./pages/login.html">
+        Comenzar ahora
+    </a>
 
-<div class="links">
-    <a href="#">¿Olvidaste tu contraseña?</a>
-    <a href="./auth/register.html">Registrarse</a>
-</div>
+</section>
 
-</div>
+<section class="beneficios" id="beneficios">
 
-</div>
+    <h2>¿Por qué elegir SportClub?</h2>
+
+    <div class="beneficios-grid">
+
+        <div class="beneficio">
+            <h3>Coaches Certificados</h3>
+            <p>Entrena con profesionales especializados.</p>
+        </div>
+
+        <div class="beneficio">
+            <h3>Equipamiento Moderno</h3>
+            <p>Instalaciones de última generación.</p>
+        </div>
+
+        <div class="beneficio">
+            <h3>Horarios Flexibles</h3>
+            <p>Entrena cuando mejor se adapte a tu rutina.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="planes" id="planes">
+
+    <h2>Nuestros Planes</h2>
+
+    <div class="planes-grid">
+
+        <div class="plan">
+            <h3>Básico</h3>
+            <p>$19.990 / mes</p>
+        </div>
+
+        <div class="plan">
+            <h3>Premium</h3>
+            <p>$29.990 / mes</p>
+        </div>
+
+        <div class="plan">
+            <h3>Elite</h3>
+            <p>$39.990 / mes</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="nosotros">
+
+    <h2>Sobre SportClub</h2>
+
+    <p>
+        SportClub es un centro deportivo dedicado al bienestar físico,
+        promoviendo hábitos saludables mediante entrenamientos
+        personalizados y equipamiento moderno.
+    </p>
+
+    <h3>Misión</h3>
+
+    <p>
+        Ayudar a las personas a alcanzar sus objetivos deportivos y mejorar
+        su calidad de vida.
+    </p>
+
+    <h3>Visión</h3>
+
+    <p>
+        Ser el centro deportivo líder en innovación y entrenamiento
+        personalizado.
+    </p>
+
+</section>
+
+<footer id="contacto">
+
+    <h3>Contacto</h3>
+
+    <p>Email: contacto@sportclub.cl</p>
+
+    <p>Teléfono: +56 9 1234 5678</p>
+
+    <p>Dirección: Av. Francisco de Aguirre, La Serena</p>
+
+</footer>
 
 </body>
 </html>
