@@ -13,7 +13,7 @@
 
     <div class="dashboard">
 
-        <h1>Bienvenido a SportClub</h1>
+        <h1 id="bienvenida"></h1>
 
         <div class="dashboard-grid">
 
@@ -68,6 +68,18 @@
         <a href="../index.html">Volver al Inicio</a>
 
     </div>
+   <script>
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (user) {
+
+    document.getElementById("bienvenida").textContent =
+        `Bienvenido ${user.full_name || user.fullname}`;
+
+}
+
+</script>
 
 </body>
 
