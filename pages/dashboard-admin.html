@@ -19,62 +19,119 @@
 
             <div class="dashboard-card">
                 <h2>Usuarios</h2>
-                <p>120 registrados</p>
+                <p id="totalUsuarios">0 usuarios</p>
             </div>
 
             <div class="dashboard-card">
                 <h2>Coaches</h2>
-                <p>15 activos</p>
+                <p id="totalCoaches">0 coaches</p>
             </div>
 
             <div class="dashboard-card">
                 <h2>Clases</h2>
-                <p>35 disponibles</p>
+                <p id="totalClases">5 clases</p>
             </div>
 
         </div>
 
         <div class="dashboard-card-large">
 
-            <h2>Gestión de Usuarios</h2>
+            <!-- CREAR USUARIO -->
 
+            <h3>Crear Usuario</h3>
+
+            <input
+                type="text"
+                id="nuevoNombre"
+                placeholder="Nombre">
+
+            <input
+                type="email"
+                id="nuevoEmail"
+                placeholder="Correo">
+
+            <input
+                type="password"
+                id="nuevoPassword"
+                placeholder="Contraseña">
+                <input
+    type="password"
+    id="confirmarPassword"
+    placeholder="Confirmar Contraseña">
+
+            <select id="nuevoRol">
+                <option value="user">Usuario</option>
+                <option value="coach">Coach</option>
+                <option value="admin">Administrador</option>
+            </select>
+
+            <button onclick="crearUsuario()">
+                Crear Usuario
+            </button>
+            <p id="mensajeCrear"></p>
+
+            <hr>
+
+            <!-- EDITAR USUARIO -->
+
+            <h3>Editar Usuario</h3>
+
+            <input
+                type="hidden"
+                id="editId">
+
+            <input
+                type="text"
+                id="editNombre"
+                placeholder="Nombre">
+
+            <input
+                type="email"
+                id="editEmail"
+                placeholder="Correo">
+
+            <select id="editRol">
+                <option value="user">Usuario</option>
+                <option value="coach">Coach</option>
+                <option value="admin">Administrador</option>
+            </select>
+
+            <button onclick="actualizarUsuario()">
+                Guardar Cambios
+            </button>
+
+            <hr>
+
+            <!-- TABLA -->
+
+            <h2>Gestión de Usuarios</h2>
+<input
+    type="text"
+    id="buscarUsuario"
+    placeholder="Buscar por nombre o correo..."
+>
             <table>
 
-                <tr>
-                    <th>Nombre</th>
-                    <th>Rol</th>
-                    <th>Estado</th>
-                </tr>
+                <thead>
+                    <tr>
+                       <th>ID</th>
+<th>Nombre</th>
+<th>Email</th>
+<th>Rol</th>
+<th>Fecha Registro</th>
+<th>Acciones</th>
+                    </tr>
+                </thead>
 
-                <tr>
-                    <td>Jean Roland</td>
-                    <td>Administrador</td>
-                    <td>Activo</td>
-                </tr>
+                <tbody id="usuariosTable">
 
-                <tr>
-                    <td>Marlange Dorcelus</td>
-                    <td>Coach</td>
-                    <td>Activo</td>
-                </tr>
+                    <tr>
+                        <td colspan="5">
+                            Cargando usuarios...
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td>Angea Dorcelus</td>
-                    <td>Usuario</td>
-                    <td>Activo</td>
-                </tr>
-
-                <tr>
-                    <td>Acia Dorcelus</td>
-                    <td>Usuario</td>
-                    <td>Activo</td>
-                </tr>
-
-                <tr>
-                    <td>Josue Pierre</td>
-                    <td>Usuario</td>
-                    <td>Inactivo</td>
-                </tr>
+                </tbody>
 
             </table>
 
@@ -82,9 +139,21 @@
 
         <br>
 
-        <a href="../index.html">Volver al Inicio</a>
+        <div class="dashboard-footer">
+
+            <a href="../index.html">
+                Volver al Inicio
+            </a>
+
+            <button onclick="logout()">
+                Cerrar Sesión
+            </button>
+
+        </div>
 
     </div>
+
+    <script src="../js/admin-users.js"></script>
 
 </body>
 

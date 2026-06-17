@@ -13,7 +13,7 @@
 
     <div class="dashboard">
 
-        <h1>Bienvenido a SportClub</h1>
+        <h1 id="bienvenida"></h1>
 
         <div class="dashboard-grid">
 
@@ -29,7 +29,7 @@
 
             <div class="dashboard-card">
                 <h2>Coach Asignado</h2>
-                <p>Juan Pérez</p>
+                <p>Angea Dorcelus</p>
             </div>
 
         </div>
@@ -64,10 +64,40 @@
         </div>
 
         <br>
+        <a href="profile.html">Mi Perfil</a>
+
+<br><br>
 
         <a href="../index.html">Volver al Inicio</a>
 
     </div>
+   <script>
+
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (!user || user.role !== "user") {
+
+    window.location.href = "../pages/login.html";
+
+} else {
+
+    document.getElementById("bienvenida").textContent =
+        `Bienvenido ${user.full_name}`;
+
+}
+
+function logout() {
+
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+
+    window.location.href = "../pages/login.html";
+
+}
+
+
+</script>
 
 </body>
 
