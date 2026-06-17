@@ -330,3 +330,122 @@ footer{
     text-decoration:none;
     font-weight:bold;
 }
+.dashboard-card-large input,
+.dashboard-card-large select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 180px;
+}
+
+.dashboard-card-large button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dashboard-card-large h3 {
+    margin-bottom: 20px;
+}
+.dashboard-card-large {
+    padding: 30px;
+}
+
+.dashboard-card-large input,
+.dashboard-card-large select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 180px;
+}
+button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2949a3;
+    transform: translateY(-2px);
+}
+button {
+    min-width: 80px;
+    margin: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.dashboard a {
+    display: inline-block;
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.dashboard a:hover {
+    background-color: #2949a3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+.dashboard-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+.dashboard-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.dashboard-footer button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dashboard-footer button:hover {
+    background-color: #b91c1c;
+}
+.dashboard-card-large hr {
+    margin: 25px 0;
+}
+#buscarUsuario {
+    width: 350px;
+    margin-bottom: 20px;
+}
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge.admin {
+    background-color: #dc3545;
+}
+
+.badge.coach {
+    background-color: #0d6efd;
+}
+
+.badge.user {
+    background-color: #198754;
+}

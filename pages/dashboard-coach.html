@@ -13,7 +13,9 @@
 
     <div class="dashboard">
 
-        <h1>Panel del Coach</h1>
+        <h1 id="bienvenidaCoach">
+            Panel del Coach
+        </h1>
 
         <div class="dashboard-grid">
 
@@ -76,9 +78,53 @@
 
         <br>
 
-        <a href="../index.html">Volver al Inicio</a>
+        <div class="dashboard-footer">
+
+            <a href="profile.html">
+                Mi Perfil
+            </a>
+
+            <a href="../index.html">
+                Volver al Inicio
+            </a>
+
+            <button onclick="logout()">
+                Cerrar Sesión
+            </button>
+
+        </div>
 
     </div>
+
+    <script>
+
+        const user = JSON.parse(
+            localStorage.getItem("user")
+        );
+
+        if (!user || user.role !== "coach") {
+
+            window.location.href =
+                "../pages/login.html";
+
+        }
+
+        document.getElementById(
+            "bienvenidaCoach"
+        ).textContent =
+            `Bienvenido Coach ${user.full_name}`;
+
+        function logout() {
+
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+
+            window.location.href =
+                "../pages/login.html";
+
+        }
+
+    </script>
 
 </body>
 
